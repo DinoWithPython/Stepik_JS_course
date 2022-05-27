@@ -1,1 +1,1 @@
-# learn_JS
+Решение задачек по изучению JS на курсе степика по фронтеду https://stepik.org/course/100971/promo.
