@@ -259,3 +259,50 @@ function unique(arr) {
     }
     return Array.from(set).join();
 }
+
+/*
+Скрыть элемент по нажатию кнопки
+Добавьте JavaScript к кнопке button, чтобы при нажатии элемент <div id="text"> исчезал.
+*/
+elem.onclick = function(event) {
+    document.getElementById('text').style.display='none'
+}
+
+/*
+Спрятать себя
+Создайте кнопку, которая будет скрывать себя по нажатию
+*/
+elem.onclick = function(event) {
+    document.getElementById('elem').style.display='none'
+}
+/*
+Создать раскрывающееся меню
+Создать меню, которое по нажатию открывается либо закрывается.
+*/
+function hidden_show_menu() {
+    let status = document.getElementById('menu');
+    if (status.style.visibility == 'visible') {
+        status.style.visibility = 'hidden';
+    } else {
+        status.style.visibility = 'visible';
+    } 
+}
+
+elem.addEventListener("click", hidden_show_menu);
+
+/*
+Добавьте пункт к выпадающему списку
+Имеется <select>:
+
+<select id="genres">
+  <option value="rock">Рок</option>
+  <option value="blues" selected>Блюз</option>
+</select>
+Используя JavaScript:
+
+Выведите значение и текст выбранного пункта.
+Добавьте пункт: <option value="classic">Классика</option>.
+Сделайте его выбранным.
+*/
+let option = document.getElementById("genres");
+option.options[option.options.length] = new Option("Классика", "selected", true, true);
